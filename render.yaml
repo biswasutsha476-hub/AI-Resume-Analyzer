@@ -3,7 +3,7 @@ services:
     name: ai-resume-analyzer
     runtime: node
     buildCommand: npm install && npm run build
-    startCommand: node server/server.js
+    startCommand: node server.js
 
     envVars:
       - key: NODE_ENV
