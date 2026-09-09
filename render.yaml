@@ -1,12 +1,9 @@
 services:
   - type: web
     name: ai-resume-analyzer
-    rootDir: Digontom Pvt Ltd
     runtime: node
-    plan: free
-    buildCommand: npm run render-build
-    startCommand: npm start
-    healthCheckPath: /api/resumes/health
+    buildCommand: npm install && npm run build
+    startCommand: node server/server.js
 
     envVars:
       - key: NODE_ENV
